@@ -1,0 +1,36 @@
+.select-picker {
+	display: grid;
+	grid-template-areas: "select";
+	align-items: center;
+	padding: 14px 48px 14px 20px;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: var(--color-text-primary);
+
+	border: 2px solid var(--color-border-primary);
+	border-radius: var(--border-radius-primary);
+	background-color: var(--color-background-primary);
+	background-image: url("../images/shared/select-picker/arrow.svg");
+	background-repeat: no-repeat;
+	background-position: center right 20px;
+	background-size: 20px 20px;
+	appearance: none;
+	cursor: pointer;
+
+	transition: border-color 200ms ease;
+}
+
+.select-picker--placeholder {
+	color: var(--color-text-secondary);
+}
+
+.select-picker--invalid {
+	border-color: var(--color-danger);
+}
+
+.select-picker:hover {
+	border-color: var(--color-border-secondary);
+}

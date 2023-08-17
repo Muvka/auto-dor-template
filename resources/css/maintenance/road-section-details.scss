@@ -1,0 +1,88 @@
+.road-section-details {
+	display: grid;
+	align-items: start;
+}
+
+.road-section-details__contacts {
+	border-radius: var(--border-radius-secondary);
+	background-color: var(--color-background-tertiary);
+}
+
+.road-section-details__title {
+	margin: 0 0 24px;
+}
+
+.road-section-details__links {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-row-gap: 24px;
+	row-gap: 24px;
+}
+
+.road-section-details__list,
+.road-section-details__contact {
+	margin: 0;
+}
+
+.road-section-details__print {
+	justify-self: start;
+}
+
+@media (max-width: 599px) {
+	.road-section-details {
+		grid-template-columns: 100%;
+		grid-row-gap: 36px;
+		row-gap: 36px;
+	}
+
+	.road-section-details__contacts {
+		padding: 20px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.road-section-details {
+		grid-gap: 20px 36px;
+		gap: 20px 36px;
+	}
+
+	.road-section-details__contacts {
+		padding: 22px;
+	}
+}
+
+@media (min-width: 600px) {
+	.road-section-details {
+		grid-template-columns: 2fr 1fr;
+	}
+
+	.road-section-details__links {
+		grid-row: 1 / 3;
+		grid-column: 2 / 3;
+	}
+}
+
+@media (min-width: 1200px) {
+	.road-section-details {
+		grid-gap: 24px 48px;
+		gap: 24px 48px;
+	}
+
+	.road-section-details__contacts {
+		padding: 24px;
+	}
+}
+
+@media print {
+	.road-section-details__contacts {
+		padding: 0;
+
+		background-color: transparent;
+	}
+
+	.road-section-details__links,
+	.road-section-details__print {
+		display: none;
+	}
+}
+

@@ -1,0 +1,74 @@
+.button {
+	display: inline-block;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: var(--color-brand-primary);
+	text-align: center;
+	text-decoration: none;
+
+	border: none;
+	border-radius: var(--border-radius-primary);
+	background-color: var(--color-background-primary);
+
+	transition: color 200ms ease, background-color 200ms ease, filter 200ms ease;
+}
+
+.button--flex {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button:not(.button--accent) {
+	box-shadow: inset 0 0 0 2px var(--color-brand-primary);
+}
+
+.button:not(.button--accent):hover {
+	color: var(--color-text-tertiary);
+
+	background-color: var(--color-brand-primary);
+}
+
+.button--accent {
+	color: var(--color-text-tertiary);
+
+	box-shadow: 0 4px 24px var(--color-shadow-secondary);
+	background-image: linear-gradient(to left, var(--color-brand-primary), var(--color-brand-secondary));
+}
+
+.button--accent:hover {
+	filter: brightness(120%);
+}
+
+.button:disabled {
+	opacity: 0.5;
+}
+
+.button__icon {
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+
+	transform: translateY(-1px);
+}
+
+@media (max-width: 599px) {
+	.button {
+		padding: 14px 16px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.button {
+		padding: 15px 20px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.button {
+		padding: 16px 24px;
+	}
+}

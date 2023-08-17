@@ -1,0 +1,46 @@
+.icon-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	color: var(--color-brand-primary);
+
+	border: 2px solid var(--color-background-primary);
+	border-radius: 50%;
+	background-color: var(--color-background-primary);
+	appearance: none;
+	cursor: pointer;
+
+	transition: border-color 200ms ease;
+}
+
+.icon-button--danger {
+	color: var(--color-danger);
+}
+
+.icon-button:hover {
+	border-color: currentColor;
+}
+
+.icon-button__icon {
+	width: 18px;
+	height: 18px;
+}
+
+@media (max-width: 599px) {
+	.icon-button {
+		padding: 5px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.icon-button {
+		padding: 6px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.icon-button {
+		padding: 7px;
+	}
+}

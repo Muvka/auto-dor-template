@@ -1,0 +1,145 @@
+.municipal-area-list {
+	display: grid;
+}
+
+.municipal-area-list__description {
+	grid-column: 1 / -1;
+	margin: 0;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	line-height: 1.5em;
+	color: var(--color-text-primary);
+}
+
+.municipal-area-list__toggle-button {
+	grid-column: 1 / -1;
+}
+
+.municipal-area-list__icon {
+	width: 16px;
+	height: 16px;
+	margin-left: 8px;
+}
+
+.municipal-area-list__list {
+	margin: 0;
+
+	border-radius: var(--border-radius-primary);
+	box-shadow: 0 0 16px var(--color-shadow-primary);
+	list-style-type: none;
+}
+
+.municipal-area-list__item:not(:last-child) {
+	border-bottom: 1px solid var(--color-border-primary);
+}
+
+.municipal-area-list__link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: var(--color-text-primary);
+	text-decoration: none;
+
+	transition: color 200ms ease;
+}
+
+.municipal-area-list__link:hover {
+	color: var(--color-brand-primary);
+}
+
+.municipal-area-list__map {
+	width: 100%;
+	height: auto;
+}
+
+.municipal-area-list__path {
+	cursor: pointer;
+
+	stroke-width: 1px;
+	stroke: var(--color-text-primary);
+
+	transition: stroke-width 200ms ease;
+}
+
+.municipal-area-list__path:hover {
+	stroke-width: 3px;
+}
+
+@media (max-width: 599px) {
+	.municipal-area-list__description {
+		font-size: 18px;
+	}
+
+	.municipal-area-list {
+		grid-gap: 16px 24px;
+		gap: 16px 24px;
+	}
+
+	.municipal-area-list__list {
+		padding: 6px 16px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.municipal-area-list__description {
+		font-size: 21px;
+	}
+
+	.municipal-area-list {
+		grid-gap: 20px 36px;
+		gap: 20px 36px;
+	}
+
+	.municipal-area-list__list {
+		padding: 8px 18px;
+	}
+}
+
+@media (max-width: 799px) {
+	.municipal-area-list {
+		grid-template-columns: 100%;
+	}
+
+	.municipal-area-list__toggle-button {
+		margin-bottom: 40px;
+	}
+
+	.municipal-area-list__list--hidden,
+	.municipal-area-list__map--hidden {
+		display: none;
+	}
+}
+
+@media (min-width: 800px) {
+	.municipal-area-list {
+		grid-template-columns: 1fr 2fr;
+	}
+
+	.municipal-area-list__toggle-button {
+		display: none;
+	}
+}
+
+@media (min-width: 1200px) {
+	.municipal-area-list__description {
+		font-size: 24px;
+	}
+
+	.municipal-area-list {
+		grid-gap: 24px 48px;
+		gap: 24px 48px;
+	}
+
+	.municipal-area-list__list {
+		padding: 10px 20px;
+	}
+}
+
+

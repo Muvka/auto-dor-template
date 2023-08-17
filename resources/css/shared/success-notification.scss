@@ -1,0 +1,71 @@
+.success-notification {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.success-notification::before {
+	content: '';
+
+	margin-bottom: 16px;
+
+	background-image: url('../images/shared/success-notification/check-round.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.success-notification__subtitle {
+	margin: 0;
+}
+
+.success-notification__description {
+	max-width: 340px;
+	width: 100%;
+	margin: 12px 0 0;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: var(--color-text-secondary);
+	text-align: center;
+}
+
+.success-notification__link {
+	max-width: 249px;
+	width: 100%;
+}
+
+@media (max-width: 599px) {
+	.success-notification::before {
+		width: 126px;
+		height: 126px;
+	}
+
+	.success-notification__link {
+		margin-top: 24px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.success-notification::before {
+		width: 138px;
+		height: 138px;
+	}
+
+	.success-notification__link {
+		margin-top: 36px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.success-notification::before {
+		width: 150px;
+		height: 150px;
+	}
+
+	.success-notification__link {
+		margin-top: 48px;
+	}
+}

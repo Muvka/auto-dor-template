@@ -1,0 +1,115 @@
+.file-input {
+	position: relative;
+}
+
+.file-input__input:-moz-focusring + .file-input__label {
+	outline: 3px solid var(--color-brand-primary);
+	outline-offset: 3px;
+}
+
+.file-input__input:focus-visible + .file-input__label {
+	outline: 3px solid var(--color-brand-primary);
+	outline-offset: 3px;
+}
+
+.file-input__label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+
+	border: 2px dashed var(--color-border-primary);
+	border-radius: var(--border-radius-primary);
+
+	background-color: var(--color-background-tertiary);
+	background-clip: padding-box;
+	cursor: pointer;
+
+	transition: border-color 200ms ease;
+}
+
+.file-input__label--drag-active {
+	background-color: var(--color-background-primary);
+}
+
+.file-input__label--error {
+	border-color: var(--color-danger);
+}
+
+.file-input__label:hover {
+	border-color: var(--color-brand-primary);
+}
+
+.file-input__label:hover .file-input__button {
+	background-color: var(--color-brand-secondary);
+}
+
+.file-input__label:hover .file-input__icon {
+	color: var(--color-brand-secondary);
+}
+
+.file-input__button {
+	display: flex;
+	align-items: center;
+	padding: 16px 24px;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: var(--color-text-tertiary);
+
+	border-radius: var(--border-radius-primary);
+	background-color: var(--color-brand-primary);
+
+	transition: background-color 200ms ease;
+}
+
+.file-input__button--error {
+	background-color: var(--color-danger);
+}
+
+.file-input__icon {
+	width: 28px;
+	height: 28px;
+	padding: 6px;
+	margin-right: 10px;
+
+	color: var(--color-brand-primary);
+
+	border-radius: 50%;
+	background-color: var(--color-background-primary);
+
+	transition: color 200ms ease;
+}
+
+.file-input__icon--error {
+	color: var(--color-danger);
+}
+
+.file-input__drag-element {
+	position: absolute;
+
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+@media (max-width: 599px) {
+	.file-input__label {
+		padding: 32px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.file-input__label {
+		padding: 40px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.file-input__label {
+		padding: 48px;
+	}
+}

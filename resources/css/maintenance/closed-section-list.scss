@@ -1,0 +1,119 @@
+.closed-section-list__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+	padding: 0;
+	margin: 0;
+
+	list-style-type: none;
+}
+
+.closed-section-list__item {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	border: 2px solid var(--color-border-primary);
+	border-radius: var(--border-radius-primary);
+	background-color: var(--color-background-primary);
+}
+
+.closed-section-list__item::before {
+	content: '';
+
+	width: 48px;
+	height: 48px;
+	margin-bottom: 12px;
+
+	border-radius: var(--border-radius-quaternary);
+	background-color: var(--color-background-secondary);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 32px 32px;
+}
+
+.closed-section-list__item--central-office::before {
+	background-image: url("../images/maintenance/closed-sections/information.svg");
+}
+
+.closed-section-list__item--administration::before {
+	background-image: url("../images/maintenance/closed-sections/management.svg");
+}
+
+.closed-section-list__item--monitoring::before {
+	background-image: url("../images/maintenance/closed-sections/radar.svg");
+}
+
+.closed-section-list__item--documents::before {
+	background-image: url("../images/maintenance/closed-sections/documents.svg");
+}
+
+.closed-section-list__link {
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.44em;
+	color: var(--color-text-primary);
+	text-decoration: none;
+
+	transition: color 200ms ease;
+}
+
+.closed-section-list__link::before {
+	content: '';
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.closed-section-list__link:hover {
+	color: var(--color-brand-primary);
+}
+
+@media (max-width: 599px) {
+	.closed-section-list__list {
+		grid-gap: 16px;
+		gap: 16px;
+	}
+
+	.closed-section-list__item {
+		align-items: center;
+		padding: 16px;
+	}
+
+	.closed-section-list__link {
+		text-align: center;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.closed-section-list__list {
+		grid-gap: 20px;
+		gap: 20px;
+	}
+
+	.closed-section-list__item {
+		padding: 20px;
+	}
+}
+
+@media (min-width: 600px) {
+	.closed-section-list__link {
+		max-width: 80%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.closed-section-list__list {
+		grid-gap: 24px;
+		gap: 24px;
+	}
+
+	.closed-section-list__item {
+		padding: 24px;
+	}
+}

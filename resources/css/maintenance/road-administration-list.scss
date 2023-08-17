@@ -1,0 +1,86 @@
+.road-administration-list__list {
+	display: grid;
+	padding: 0;
+	margin: 0;
+
+	list-style-type: none;
+}
+
+.road-administration-list__item {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+
+	border: 1px solid var(--color-border-primary);
+	border-radius: var(--border-radius-primary);
+	background-color: var(--color-background-primary);
+}
+
+.road-administration-list__link {
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: var(--color-text-primary);
+	text-align: center;
+	text-decoration: none;
+	hyphens: auto;
+
+	transition: color 200ms ease;
+}
+
+.road-administration-list__link::before {
+	content: '';
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.road-administration-list__link:hover {
+	color: var(--color-brand-primary);
+}
+
+@media (max-width: 599px) {
+	.road-administration-list__list {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 16px;
+		gap: 16px;
+	}
+
+	.road-administration-list__item {
+		padding: 16px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.road-administration-list__list {
+		grid-gap: 20px;
+		gap: 20px;
+	}
+
+	.road-administration-list__item {
+		padding: 20px;
+	}
+}
+
+@media (min-width: 600px) {
+	.road-administration-list__list {
+		grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+	}
+}
+
+@media (min-width: 1200px) {
+	.road-administration-list__list {
+		grid-gap: 24px;
+		gap: 24px;
+	}
+
+	.road-administration-list__item {
+		padding: 24px;
+	}
+}

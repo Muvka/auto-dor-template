@@ -1,0 +1,18 @@
+.detailed-information__list {
+	width: 100%;
+	margin: 0;
+}
+
+.detailed-information__list--narrow {
+	max-width: 640px;
+}
+
+.detailed-information__print {
+	margin: 24px 0 0;
+}
+
+@media print {
+	.detailed-information__print {
+		display: none;
+	}
+}

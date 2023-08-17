@@ -1,0 +1,21 @@
+.privacy-link {
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1.34em;
+	color: var(--color-text-secondary);
+	text-align: center;
+}
+
+.privacy-link__link {
+	display: block;
+
+	color: currentColor;
+	text-decoration: underline;
+
+	transition: color 200ms ease;
+}
+
+.privacy-link__link:hover {
+	color: var(--color-brand-primary);
+}

@@ -1,0 +1,94 @@
+.service-list__list {
+	display: grid;
+	padding: 0;
+	margin: 0;
+
+	list-style-type: none;
+}
+
+.service-list__item {
+	padding: 16px;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+
+	color: var(--color-text-primary);
+
+	border-radius: var(--border-radius-primary);
+	background-color: var(--color-background-tertiary);
+}
+
+.service-list__item::before {
+	content: '';
+
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin-bottom: 12px;
+
+	border-radius: var(--border-radius-primary);
+	background-color: var(--color-background-primary);
+	background-image: var(--icon-source);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 48px 48px;
+}
+
+.service-list__item--construction-works::before {
+	background-image: url('../images/information/services/work-in-progress.svg');
+}
+
+.service-list__item--maintenance-works::before {
+	background-image: url('../images/information/services/road.svg');
+}
+
+.service-list__item--laboratory::before {
+	background-image: url('../images/information/services/laboratory.svg');
+}
+
+.service-list__item--production::before {
+	background-image: url('../images/information/services/stones.svg');
+}
+
+.service-list__item--tow-truck::before {
+	background-image: url('../images/information/services/tow-truck.svg');
+}
+
+.service-list__item--rent::before {
+	background-image: url('../images/information/services/bulldozer.svg');
+}
+
+@media (max-width: 399px) {
+	.service-list__list {
+		grid-template-columns: 100%;
+	}
+}
+
+@media (min-width: 400px) {
+	.service-list__list {
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	}
+}
+
+@media (max-width: 599px) {
+	.service-list__list {
+		grid-gap: 16px 12px;
+		gap: 16px 12px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.service-list__list {
+		grid-gap: 24px 18px;
+		gap: 24px 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.service-list__list {
+		grid-gap: 32px 24px;
+		gap: 32px 24px;
+	}
+}

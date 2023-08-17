@@ -1,0 +1,44 @@
+.title {
+	font-family: var(--font-title-primary);
+	font-weight: 500;
+	line-height: 1.2em;
+	color: var(--color-text-primary);
+}
+
+.title--small {
+	line-height: 1.25em;
+}
+
+.title--center {
+	text-align: center;
+}
+
+@media (max-width: 599px) {
+	.title {
+		font-size: 28px;
+	}
+
+	.title--small {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.title {
+		font-size: 38px;
+	}
+
+	.title--small {
+		font-size: 21px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.title {
+		font-size: 48px;
+	}
+
+	.title--small {
+		font-size: 24px;
+	}
+}

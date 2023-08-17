@@ -1,0 +1,101 @@
+.error-notification {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.error-notification::before {
+	content: '';
+
+	display: block;
+	width: 100%;
+	max-width: 340px;
+	aspect-ratio: 34 / 13;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	@supports not (aspect-ratio: 1 / 1) {
+		height: 100px;
+	}
+}
+
+.error-notification--403::before {
+	background-image: url('../images/shared/error-notification/error-403.svg');
+}
+
+.error-notification--404::before {
+	background-image: url('../images/shared/error-notification/error-404.svg');
+}
+
+.error-notification--500::before {
+	background-image: url('../images/shared/error-notification/error-500.svg');
+}
+
+.error-notification--503::before {
+	background-image: url('../images/shared/error-notification/error-503.svg');
+}
+
+.error-notification__title {
+	margin: 0;
+}
+
+.error-notification__description {
+	width: 100%;
+	max-width: 564px;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: var(--color-text-primary);
+	text-align: center;
+}
+
+.error-notification__link {
+	width: 100%;
+	max-width: 305px;
+}
+
+@media (max-width: 599px) {
+	.error-notification::before {
+		margin-bottom: 24px;
+	}
+
+	.error-notification__description {
+		margin: 16px 0 0;
+	}
+
+	.error-notification__link {
+		margin-top: 24px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.error-notification::before {
+		margin-bottom: 36px;
+	}
+
+	.error-notification__description {
+		margin: 20px 0 0;
+	}
+
+	.error-notification__link {
+		margin-top: 36px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.error-notification::before {
+		margin-bottom: 48px;
+	}
+
+	.error-notification__description {
+		margin: 24px 0 0;
+	}
+
+	.error-notification__link {
+		margin-top: 48px;
+	}
+}

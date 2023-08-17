@@ -1,0 +1,146 @@
+.user-widget {
+	display: grid;
+}
+
+.user-widget__name {
+	display: flex;
+	align-items: center;
+	margin: 0;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	line-height: 1.25em;
+	color: var(--color-text-primary);
+	hyphens: auto;
+}
+
+.user-widget__link {
+	color: currentColor;
+	text-decoration: none;
+
+	transition: color 200ms ease;
+}
+
+.user-widget__link:hover {
+	color: var(--color-brand-primary);
+}
+
+.user-widget__button {
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	line-height: 1.25em;
+	text-align: center;
+	text-decoration: none;
+
+	border: none;
+	background-color: transparent;
+
+	transition: color 200ms ease;
+}
+
+.user-widget__button:hover {
+	color: var(--color-brand-primary);
+}
+
+@media (max-width: 599px) {
+	.user-widget {
+		grid-template-columns: 100%;
+		justify-items: center;
+		grid-row-gap: 4px;
+		row-gap: 4px;
+	}
+
+	.user-widget__name {
+		position: relative;
+
+		padding: 6px 12px;
+
+		font-size: 13px;
+		text-align: center;
+
+		border-radius: var(--border-radius-tertiary);
+		background-color: var(--color-background-secondary);
+	}
+
+	.user-widget__link::before {
+		content: '';
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+	}
+
+	.user-widget__button {
+		padding: 0;
+
+		font-size: 13px;
+		color: var(--color-text-secondary);
+
+		appearance: none;
+	}
+
+	.user-widget__logout-icon {
+		display: none;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.user-widget {
+		grid-column-gap: 20px;
+		column-gap: 20px;
+	}
+}
+
+@media (min-width: 600px) {
+	.user-widget {
+		grid-template-columns: max-content max-content;
+		align-items: center;
+	}
+
+	.user-widget__name {
+		font-size: 16px;
+	}
+
+	.user-widget__name::before {
+		content: '';
+
+		width: 32px;
+		height: 32px;
+		margin-right: 12px;
+
+		border-radius: 50%;
+		background-color: var(--color-background-secondary);
+		background-image: url('../images/user/user-widget/person.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 20px 20px;
+	}
+
+	.user-widget__button {
+		display: flex;
+		align-items: center;
+		padding: 14px 16px;
+
+		font-size: 14px;
+		color: var(--color-text-primary);
+
+		border-radius: var(--border-radius-primary);
+		box-shadow: 0 0 0 2px var(--color-border-primary);
+	}
+
+	.user-widget__logout-icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.user-widget {
+		grid-column-gap: 24px;
+		column-gap: 24px;
+	}
+}

@@ -1,0 +1,54 @@
+.image-input {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-row-gap: 12px;
+	row-gap: 12px;
+}
+
+.image-input__input:-moz-focusring + .image-input__label {
+	outline: 3px solid var(--color-brand-primary);
+	outline-offset: 3px;
+}
+
+.image-input__input:focus-visible + .image-input__label {
+	outline: 3px solid var(--color-brand-primary);
+	outline-offset: 3px;
+}
+
+.image-input__label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 22px;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: var(--color-text-secondary);
+	text-align: center;
+
+	border: 2px dashed var(--color-border-primary);
+	border-radius: var(--border-radius-primary);
+	cursor: pointer;
+
+	transition: color 200ms ease, border-color 200ms ease;
+}
+
+.image-input__label--error {
+	border-color: var(--color-danger);
+}
+
+.image-input__label:hover {
+	color: var(--color-brand-primary);
+
+	border-color: var(--color-brand-primary);
+}
+
+.image-input__list {
+	margin: 0;
+}
+
+.image-input__error-message {
+	margin: 0;
+}

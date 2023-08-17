@@ -1,0 +1,36 @@
+.page-footer {
+	background-color: var(--color-background-tertiary);
+}
+
+.page-footer__content-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 599px) {
+	.page-footer {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.page-footer {
+		padding-top: 18px;
+		padding-bottom: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.page-footer {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+}
+
+@media print {
+	.page-footer {
+		display: none;
+	}
+}

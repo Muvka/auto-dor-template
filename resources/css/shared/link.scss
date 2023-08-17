@@ -1,0 +1,23 @@
+.link {
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: var(--color-text-quaternary);
+	text-decoration: underline;
+
+	transition: color 200ms ease;
+}
+
+.link--center {
+	text-align: center;
+}
+
+.link--secondary {
+	color: var(--color-text-secondary);
+	text-decoration: none;
+}
+
+.link:hover {
+	color: var(--color-brand-primary);
+}

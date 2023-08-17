@@ -1,0 +1,185 @@
+.site-section-list__list {
+	display: grid;
+	padding: 0;
+	margin: 0;
+
+	list-style-type: none;
+}
+
+.site-section-list__item {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+
+	background-color: var(--color-background-secondary);
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+.site-section-list__item--maintenance {
+	background-image: url('../images/shared/site-sections/kamaz-1x.webp');
+}
+
+.site-section-list__item--repair {
+	background-image: url('../images/shared/site-sections/road-roller-1x.webp');
+}
+
+.site-section-list__item--fixing-comments {
+	background-image: url('../images/shared/site-sections/road-works-1x.webp');
+}
+
+.site-section-list__item--about {
+	background-image: url('../images/shared/site-sections/info-1x.webp');
+}
+
+@media (min-resolution: 1.5dppx) {
+	.site-section-list__item--maintenance {
+		background-image: url('../images/shared/site-sections/kamaz-2x.webp');
+	}
+
+	.site-section-list__item--repair {
+		background-image: url('../images/shared/site-sections/road-roller-2x.webp');
+	}
+
+	.site-section-list__item--fixing-comments {
+		background-image: url('../images/shared/site-sections/road-works-2x.webp');
+	}
+
+	.site-section-list__item--about {
+		background-image: url('../images/shared/site-sections/info-2x.webp');
+	}
+}
+
+@media (min-resolution: 2.5dppx) {
+	.site-section-list__item--maintenance {
+		background-image: url('../images/shared/site-sections/kamaz-3x.webp');
+	}
+
+	.site-section-list__item--repair {
+		background-image: url('../images/shared/site-sections/road-roller-3x.webp');
+	}
+
+	.site-section-list__item--fixing-comments {
+		background-image: url('../images/shared/site-sections/road-works-3x.webp');
+	}
+
+	.site-section-list__item--about {
+		background-image: url('../images/shared/site-sections/info-3x.webp');
+	}
+}
+
+.site-section-list__title {
+	width: min-content;
+	margin: 0;
+
+	font-family: var(--font-title-primary);
+	font-weight: 500;
+	line-height: 1.22em;
+	color: var(--color-text-primary);
+}
+
+.site-section-list__link {
+	color: currentColor;
+	text-decoration: none;
+
+	transition: color 200ms ease;
+}
+
+.site-section-list__link::before {
+	content: '';
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.site-section-list__link:hover {
+	color: var(--color-brand-primary)
+}
+
+@media (max-width: 599px) {
+	.site-section-list__list {
+		grid-gap: 16px;
+		gap: 16px;
+	}
+
+	.site-section-list__item {
+		min-height: 106px;
+		padding: 20px;
+
+		background-size: auto 106px;
+	}
+
+	.site-section-list__title {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.site-section-list__list {
+		grid-gap: 20px;
+		gap: 20px;
+	}
+
+	.site-section-list__item {
+		min-height: 168px;
+		padding: 28px;
+
+		background-size: auto 168px;
+	}
+
+	.site-section-list__title {
+		font-size: 21px;
+	}
+}
+
+@media (min-width: 600px) {
+	.site-section-list__list {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.site-section-list__item {
+		border-radius: var(--border-radius-primary);
+	}
+}
+
+@media (max-width: 799px) {
+	.site-section-list__list {
+		grid-template-columns: 100%;
+	}
+
+	.site-section-list__item {
+		border-radius: var(--border-radius-secondary);
+	}
+}
+
+@media (min-width: 800px) {
+	.site-section-list__list {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.site-section-list__item {
+		border-radius: var(--border-radius-primary);
+	}
+}
+
+@media (min-width: 1200px) {
+	.site-section-list__list {
+		grid-gap: 24px;
+		gap: 24px;
+	}
+
+	.site-section-list__item {
+		min-height: 230px;
+		padding: 36px;
+
+		background-size: auto 230px;
+	}
+
+	.site-section-list__title {
+		font-size: 24px;
+	}
+}

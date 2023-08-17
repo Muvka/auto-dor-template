@@ -1,0 +1,50 @@
+.contact-line {
+	display: flex;
+	align-items: center;
+
+	font-family: var(--font-body-primary);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: var(--color-text-primary);
+}
+
+.contact-line::before {
+	content: '';
+
+	width: 36px;
+	height: 36px;
+	margin-right: 12px;
+
+	border-radius: 50%;
+	box-shadow: 0 0 16px var(--color-shadow-primary);
+	background-color: var(--color-background-primary);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px 20px;
+}
+
+.contact-line--email::before {
+	background-image: url('../images/contacts/contact-line/letter.svg');
+}
+
+.contact-line--telephone::before {
+	background-image: url('../images/contacts/contact-line/handset.svg');
+}
+
+.contact-line__link {
+	color: currentColor;
+	text-decoration: none;
+
+	transition: color 200ms ease;
+}
+
+.contact-line__link:hover {
+	color: var(--color-brand-primary);
+}
+
+@media print {
+	.contact-line::before {
+		display: none;
+	}
+}

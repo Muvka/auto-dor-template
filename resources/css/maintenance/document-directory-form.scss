@@ -1,0 +1,80 @@
+.document-directory-form {
+	border-radius: var(--border-radius-primary);
+	background-color: var(--color-background-tertiary);
+}
+
+.document-directory-form__title {
+	margin: 0 0 16px;
+}
+
+.document-directory-form__form {
+	position: relative;
+}
+
+.document-directory-form__submit {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	z-index: 2;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+
+	color: var(--color-text-tertiary);
+
+	border: none;
+	border-radius: 50%;
+	background-color: var(--color-brand-primary);
+	appearance: none;
+
+	transition: background-color 200ms ease;
+}
+
+.document-directory-form__submit--inactive {
+	background-color: var(--color-danger);
+
+	pointer-events: none;
+}
+
+.document-directory-form__submit::before {
+	content: '';
+
+	position: absolute;
+	top: -16px;
+	right: -16px;
+	bottom: -16px;
+	left: -16px;
+	z-index: -1;
+
+	border-radius: inherit;
+}
+
+.document-directory-form__submit:hover {
+	background-color: var(--color-brand-secondary);
+}
+
+.document-directory-form__submit-icon {
+	width: 16px;
+	height: 16px;
+}
+
+@media (max-width: 599px) {
+	.document-directory-form {
+		padding: 20px 20px 24px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+	.document-directory-form {
+		padding: 26px 26px 30px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.document-directory-form {
+		padding: 32px 32px 36px;
+	}
+}
