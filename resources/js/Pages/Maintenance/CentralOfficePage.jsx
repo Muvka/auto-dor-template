@@ -125,7 +125,7 @@ const CentralOfficePage = (
 							</tbody>
 						</table>
 					</DescriptionList.Item>
-					<DescriptionList.Item term='Здания и сооружения АО «Вятавтодор»:'
+					<DescriptionList.Item term='Здания и сооружения АО «Название компании»:'
 										  definition={totalBuildingsNumber} />
 					<DescriptionList.Item term='Количество ДУ:' definition={roadAdministrations.length}>
 						<table className='table'>
