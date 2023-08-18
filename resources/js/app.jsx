@@ -12,7 +12,7 @@ createInertiaApp({
 
 		return page;
 	},
-	title: title => `${title} - ВЯТАВТОДОР`,
+	title: title => `${title} - Название компании`,
 	progress: {
 		delay: 0,
 		color: '#14538D',
