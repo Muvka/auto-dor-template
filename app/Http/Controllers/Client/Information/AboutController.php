@@ -11,37 +11,37 @@ class AboutController extends Controller
 	{
 		return Inertia::render('Information/AboutPage', [
 			'title' => 'О компании',
-			'description' => fake()->realText('300'),
+			'description' => 'Наша компания предлагает широкий спектр услуг:',
 			'services' => [
 				[
 					'id' => 'construction-works',
 					'icon' => asset('assets/client/images/information/service-list/work-in-progress.svg'),
-					'text' => fake()->realTextBetween('50', '200'),
+					'text' => 'Выполнение работ по строительству, реконструкции, капитальному ремонту, ремонту автодорог',
 				],
 				[
 					'id' => 'maintenance-works',
 					'icon' => asset('assets/client/images/information/service-list/road.svg'),
-					'text' => fake()->realTextBetween('50', '200'),
+					'text' => 'Выполнение работ по ремонту и содержанию автодорог',
 				],
 				[
 					'id' => 'laboratory',
 					'icon' => asset('assets/client/images/information/service-list/laboratory.svg'),
-					'text' => fake()->realTextBetween('50', '200'),
+					'text' => 'Лабораторный контроль качества выпускаемой продукции',
 				],
 				[
 					'id' => 'production',
 					'icon' => asset('assets/client/images/information/service-list/stones.svg'),
-					'text' => fake()->realTextBetween('50', '200'),
+					'text' => 'Производство асфальтобетонных смесей всех типов и видов',
 				],
 				[
 					'id' => 'tow-truck',
 					'icon' => asset('assets/client/images/information/service-list/tow-truck.svg'),
-					'text' => fake()->realTextBetween('50', '200'),
+					'text' => 'Услуги эвакуаторов и хранение транспортных средств',
 				],
 				[
 					'id' => 'rent',
 					'icon' => asset('assets/client/images/information/service-list/bulldozer.svg'),
-					'text' => fake()->realTextBetween('50', '200'),
+					'text' => 'Аренда спецтехники',
 				],
 			],
 		]);
