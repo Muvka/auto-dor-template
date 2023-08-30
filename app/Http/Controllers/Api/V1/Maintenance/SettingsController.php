@@ -7,7 +7,7 @@ use App\Settings\Maintenance\CentralOfficeSettings;
 use App\Settings\Maintenance\GeneralSettings;
 use Illuminate\Http\Request;
 
-class SettingController extends Controller
+class SettingsController extends Controller
 {
     public function __invoke(Request $request, GeneralSettings $generalSettings, CentralOfficeSettings $centralOfficeSettings) {
 		$general = [
