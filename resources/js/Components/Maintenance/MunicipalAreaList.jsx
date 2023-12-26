@@ -39,7 +39,7 @@ const MunicipalAreaList = ({ areas = [], routeName = '', className = '' }) => {
 					</li>
 				))}
 			</ul>
-			<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Russia_-_blank_map_%282009-01%29.svg/1600px-Russia_-_blank_map_%282009-01%29.svg.png' width='479' alt=''
+			<img src='/assets/client/images/municipal-area/map.jpeg' width='900' height="496" alt=''
 				 className={clsx('municipal-area-list__map', {
 					 'municipal-area-list__map--hidden': activeView === 'list',
 				 })} />
